@@ -1,0 +1,187 @@
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++       REPORT INFO       ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+SUMMARY
+===============================================
+|     Property     |          Value           |
+===============================================
+| User             | runner                   |
+| Host             | 3fa856877b42             |
+| Tool             | Riviera-PRO 2023.04      |
+| Report file      | /home/runner/cov.txt     |
+| Report date      | 2024-07-22 10:05         |
+| Report arguments | -verbose                 |
+| Input file       | /home/runner/fcover.acdb |
+| Input file date  | 2024-07-22 10:05         |
+| Number of tests  | 1                        |
+===============================================
+
+
+TEST DETAILS
+==============================================
+| Property |              Value              |
+==============================================
+| Test     | fcover.acdb:fcover              |
+| Status   | Warning                         |
+| Args     | asim +access+r                  |
+| Simtime  | 2970 ns                         |
+| Cputime  | 1.420 s                         |
+| Seed     | 1                               |
+| Date     | 2024-07-22 10:05                |
+| User     | runner                          |
+| Host     | 3fa856877b42                    |
+| Host os  | Linux64                         |
+| Tool     | Riviera-PRO 2023.04 (simulator) |
+==============================================
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++     DESIGN HIERARCHY    ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+CUMULATIVE SUMMARY
+=============================================
+|    Coverage Type    | Weight | Hits/Total |
+=============================================
+| Covergroup Coverage |      1 |   100.000% |
+|---------------------|--------|------------|
+| Types               |        |      1 / 1 |
+=============================================
+CUMULATIVE INSTANCE-BASED COVERAGE: 100.000%
+COVERED INSTANCES: 1 / 1
+FILES: 1
+
+
+CLASS - /monitor : work.monitor
+
+
+    SUMMARY
+    =============================================
+    |    Coverage Type    | Weight | Hits/Total |
+    =============================================
+    | Covergroup Coverage |      1 |   100.000% |
+    |---------------------|--------|------------|
+    | Types               |        |      1 / 1 |
+    =============================================
+    WEIGHTED AVERAGE LOCAL: 100.000%
+
+
+    COVERGROUP COVERAGE
+    ====================================================================
+    |            Covergroup            |   Hits   |  Goal /  | Status  |
+    |                                  |          | At Least |         |
+    ====================================================================
+    | TYPE /monitor/c                  | 100.000% | 100.000% | Covered |
+    ====================================================================
+    | INSTANCE cvr_axi                 | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::data.command | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin auto[0]                      |        8 |        1 | Covered |
+    | bin auto[1]                      |        6 |        1 | Covered |
+    | bin auto[2]                      |        6 |        1 | Covered |
+    | bin auto[3]                      |        6 |        1 | Covered |
+    | bin auto[4]                      |        6 |        1 | Covered |
+    | bin auto[5]                      |        6 |        1 | Covered |
+    | bin auto[6]                      |        6 |        1 | Covered |
+    | bin auto[7]                      |        6 |        1 | Covered |
+    | bin auto[8]                      |        6 |        1 | Covered |
+    | bin auto[9]                      |        6 |        1 | Covered |
+    | bin auto[10]                     |        6 |        1 | Covered |
+    | bin auto[11]                     |        4 |        1 | Covered |
+    | bin auto[12]                     |        6 |        1 | Covered |
+    | bin auto[13]                     |        6 |        1 | Covered |
+    | bin auto[14]                     |        6 |        1 | Covered |
+    | bin auto[15]                     |        6 |        1 | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::apbin.paddr  | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin a                            |       16 |        1 | Covered |
+    | bin b                            |       16 |        1 | Covered |
+    | bin command                      |       16 |        1 | Covered |
+    | bin enable                       |       16 |        1 | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::apbin.pwrite | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin auto[0]                      |       16 |        1 | Covered |
+    | bin auto[1]                      |       80 |        1 | Covered |
+    ====================================================================
+
+
++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++       DESIGN UNITS      ++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
+
+
+CUMULATIVE SUMMARY
+=============================================
+|    Coverage Type    | Weight | Hits/Total |
+=============================================
+| Covergroup Coverage |      1 |   100.000% |
+|---------------------|--------|------------|
+| Types               |        |      1 / 1 |
+=============================================
+CUMULATIVE DESIGN-BASED COVERAGE: 100.000%
+COVERED DESIGN UNITS: 1 / 1
+FILES: 1
+
+
+CLASS - work.monitor
+
+
+    SUMMARY
+    =============================================
+    |    Coverage Type    | Weight | Hits/Total |
+    =============================================
+    | Covergroup Coverage |      1 |   100.000% |
+    |---------------------|--------|------------|
+    | Types               |        |      1 / 1 |
+    =============================================
+    WEIGHTED AVERAGE: 100.000%
+
+
+    COVERGROUP COVERAGE
+    ====================================================================
+    |            Covergroup            |   Hits   |  Goal /  | Status  |
+    |                                  |          | At Least |         |
+    ====================================================================
+    | TYPE /monitor/c                  | 100.000% | 100.000% | Covered |
+    ====================================================================
+    | INSTANCE cvr_axi                 | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::data.command | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin auto[0]                      |        8 |        1 | Covered |
+    | bin auto[1]                      |        6 |        1 | Covered |
+    | bin auto[2]                      |        6 |        1 | Covered |
+    | bin auto[3]                      |        6 |        1 | Covered |
+    | bin auto[4]                      |        6 |        1 | Covered |
+    | bin auto[5]                      |        6 |        1 | Covered |
+    | bin auto[6]                      |        6 |        1 | Covered |
+    | bin auto[7]                      |        6 |        1 | Covered |
+    | bin auto[8]                      |        6 |        1 | Covered |
+    | bin auto[9]                      |        6 |        1 | Covered |
+    | bin auto[10]                     |        6 |        1 | Covered |
+    | bin auto[11]                     |        4 |        1 | Covered |
+    | bin auto[12]                     |        6 |        1 | Covered |
+    | bin auto[13]                     |        6 |        1 | Covered |
+    | bin auto[14]                     |        6 |        1 | Covered |
+    | bin auto[15]                     |        6 |        1 | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::apbin.paddr  | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin a                            |       16 |        1 | Covered |
+    | bin b                            |       16 |        1 | Covered |
+    | bin command                      |       16 |        1 | Covered |
+    | bin enable                       |       16 |        1 | Covered |
+    |----------------------------------|----------|----------|---------|
+    | COVERPOINT cvr_axi::apbin.pwrite | 100.000% | 100.000% | Covered |
+    |----------------------------------|----------|----------|---------|
+    | bin auto[0]                      |       16 |        1 | Covered |
+    | bin auto[1]                      |       80 |        1 | Covered |
+    ====================================================================
+
+
