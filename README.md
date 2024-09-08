@@ -1,6 +1,6 @@
 # UVM-Test-Bench-For-APB-Protocol
-his project features a comprehensive UVM testbench designed to validate the functionality and performance of the APB slave.. 
-- To run the simulation in EDA playgroung  
+This project features a comprehensive UVM testbench designed to validate the functionality and performance of the APB slave... 
+- To simulate the EDA playground  
 
 [![EDA Playgroung](https://www.edaplayground.com/img/logo.png?v=2)](https://www.edaplayground.com/x/LtAb)
 
@@ -12,7 +12,7 @@ his project features a comprehensive UVM testbench designed to validate the func
 
 
 # APB Protocol:
-- APB is low bandwidth and low performance bus. So, the components requiring lower bandwidth like the peripheral devices such as UART, Keypad, Timer and PIO (Peripheral Input Output) devices are connected to the APB. The bridge connects the high performance AHB or ASB bus to the APB bus. So, for APB the bridge acts as the master and all the devices connected on the APB bus acts as the slave.
+- APB is a low bandwidth and low-performance bus. So, the components requiring lower bandwidth, like the peripheral devices such as UART, Keypad, Timer, and PIO (Peripheral Input Output) devices, are connected to the APB. The bridge connects the high-performance AHB or ASB bus to the APB bus. So, for APB, the bridge acts as the master, and all the devices connected to the APB bus act as the slave.
 
 
 Here is a simplified timing diagram for the APB read operation:
@@ -21,7 +21,7 @@ Here is a simplified timing diagram for the APB read operation:
 - **PADDR:** Address bus carrying the address of the register to be read.
 - **PSELx:** Select signal for the target slave.
 - **PENABLE:** Enable signal indicating the access phase.
-- **PWRITE:** Write signal indicating the type of operation (0 for read).
+- **PWRITE:** Write a signal indicating the type of operation (0 for read).
 - **PREADY:** Ready signal indicating the slave is ready with the data.
 - **PRDATA:** Read data bus carrying the data from the slave to the master.
 
@@ -30,14 +30,14 @@ This process ensures that the master can read data from the desired register wit
  
 # APB Read operation:
 
-- Initiating a write operation in APB involves a handshake between the master and slave.The master asserts the `PSEL` signal to select the target slave, followed by placing the write address on the `PADDR` bus and the data on the `PWDATA` bus. It then activates the `PWRITE` signal to indicate a write operation and raises the PENABLE signal to initiate the transfer. The slave acknowledges its readiness by asserting the `PREADY` signal. Once the data transfer is complete, the slave de-asserts `PREADY`on the next clock cycle. The master acknowledges completion by de-asserting both `PENABLE` and `PSEL` signals, finalizing the write operation using these designated APB signals.
+- Initiating a write operation in APB involves a handshake between the master and slave. The master asserts the `PSEL` signal to select the target slave, placing the write address on the `PADDR` bus and the data on the `PWDATA` bus. It then activates the `PWRITE` signal to indicate a write operation and raises the PENABLE signal to initiate the transfer. The slave acknowledges its readiness by asserting the `PREADY` signal. Once the data transfer is complete, the slave de-asserts `PREADY`on the next clock cycle. The master acknowledges completion by de-asserting both `PENABLE` and `PSEL` signals, finalizing the write operation using these designated APB signals.
 
 
 ![Read operation in APB](Images/write_spec.png "title")
 
 # APB Write Operation:
 
-- Similarly to the Write operation ,Read operation have the same mechanism only difference is the `PWRITE` signal will be low during this operation , and the slave will push the data to the `PRWRITE`
+- Similarly to the Write operation, the Read operation has the exact mechanism only difference is the `PWRITE` signal will be low during this operation, and the slave will push the data to the `PRWRITE`
 
 ![Read operation in APB](Images/write_spec.png "title")
 
@@ -63,8 +63,8 @@ This process ensures that the master can read data from the desired register wit
 ## Overview
 The Universal Verification Methodology (UVM) is a powerful standard framework for verifying complex digital designs.UVM excels in creating reusable and scalable verification environments.
 
-- **Reusability:** UVM promotes creating modular components that can be reused across different verification projects. 
-- **Scalability:** The UVM approach allows you to easily adapt your testbench to accommodate growing design complexity.
+- **Reusability:** UVM promotes creating modular components that can be reused across verification projects. 
+- **Scalability:** The UVM approach allows you to quickly adapt your testbench to accommodate growing design complexity.
 - **Standardization:** UVM provides a standardized methodology for verification component creation, improving code readability and maintainability.
  
 ## Testbench Components
@@ -74,7 +74,7 @@ The Universal Verification Methodology (UVM) is a powerful standard framework fo
 
 ## Register Abstraction Model:
 
-- The Register Abstraction Layer (RAL) is a key component in the Universal Verification Methodology (UVM) that simplifies the process of verifying register-based interfaces in digital designs. It provides a high-level abstraction for defining and interacting with registers, making verification more efficient and manageable.
+- The Register Abstraction Layer (RAL) is a key component in the Universal Verification Methodology (UVM) that simplifies verifying register-based interfaces in digital designs. It provides a high-level abstraction for defining and interacting with registers, making verification more efficient and manageable.
 
 ![Register Model Testbench Environment](https://verificationguide.com/images/uvm_ral/uvm_ral_testbench.png)
 
